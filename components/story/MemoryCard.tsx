@@ -15,14 +15,14 @@ const contentVariants: Variants = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.16,
+      staggerChildren: 0.14,
       delayChildren: 0.1,
     },
   },
 };
 
 const itemVariants: Variants = {
-  hidden: { opacity: 0, y: 26 },
+  hidden: { opacity: 0, y: 24 },
   visible: {
     opacity: 1,
     y: 0,
@@ -38,8 +38,8 @@ export default function MemoryCard({
 }: Props) {
   // Alternate the pan direction per photo so the Ken Burns
   // effect feels curated rather than a single repeated zoom.
-  const panX = index % 2 === 0 ? 22 : -22;
-  const panY = index % 3 === 0 ? -16 : 12;
+  const panX = index % 2 === 0 ? 14 : -14;
+  const panY = index % 3 === 0 ? -10 : 8;
 
   return (
     <section
@@ -47,30 +47,21 @@ export default function MemoryCard({
       ref={sectionRef}
       data-index={index}
     >
-      {/* Background Image */}
-      <motion.div
-        className="memory-image"
-        initial={{ scale: 1, x: 0, y: 0 }}
-        animate={{ scale: 1.14, x: panX, y: panY }}
-        transition={{ duration: 15, ease: "easeOut" }}
-      >
+      {/* Soft blurred backdrop (same photo) for depth */}
+      <div className="memory-backdrop">
         <Image
           src={memory.image}
-          alt={memory.title}
+          alt=""
           fill
-          priority={memory.id === 1}
+          aria-hidden
           sizes="100vw"
-          style={{
-            objectFit: "cover",
-          }}
+          style={{ objectFit: "cover" }}
         />
-      </motion.div>
-
-      {/* Dark Overlay + Vignette */}
+      </div>
       <div className="memory-overlay" />
       <div className="memory-vignette" />
 
-      {/* Content */}
+      {/* Foreground content */}
       <motion.div
         className="memory-content"
         initial="hidden"
@@ -78,6 +69,26 @@ export default function MemoryCard({
         viewport={{ once: true, amount: 0.4 }}
         variants={contentVariants}
       >
+        {/* Square photo frame */}
+        <motion.div className="memory-frame" variants={itemVariants}>
+          <motion.div
+            className="memory-image"
+            initial={{ scale: 1.02, x: 0, y: 0 }}
+            whileInView={{ scale: 1.14, x: panX, y: panY }}
+            viewport={{ once: true, amount: 0.4 }}
+            transition={{ duration: 14, ease: "easeOut" }}
+          >
+            <Image
+              src={memory.image}
+              alt={memory.title}
+              fill
+              priority={memory.id === 1}
+              sizes="(max-width: 700px) 84vw, 460px"
+              style={{ objectFit: "cover" }}
+            />
+          </motion.div>
+        </motion.div>
+
         <motion.p className="memory-number" variants={itemVariants}>
           {String(memory.id).padStart(2, "0")}
           <span className="memory-number-total">

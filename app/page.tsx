@@ -17,6 +17,7 @@ import Video from "@/components/video/Video";
 import Ending from "@/components/ending/Ending";
 
 import AudioPlayer from "@/components/audio/AudioPlayer";
+import AmbientBackground from "@/components/background/AmbientBackground";
 
 type Screen =
   | "access"
@@ -39,6 +40,8 @@ export default function Home() {
 
   return (
     <>
+      <AmbientBackground />
+
       <AudioPlayer />
 
       {screen === "access" && (

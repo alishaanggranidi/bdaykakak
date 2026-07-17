@@ -15,8 +15,8 @@ const QUESTIONS = [
   },
   {
     question: "when was our first kiss?",
-    options: ["4 januari", "5 januari", "8 maret"],
-    answer: "5 januari",
+    options: ["4 january", "5 january", "8 march"],
+    answer: "5 january",
   },
   {
     question: "what do i usually call you?",
@@ -136,7 +136,7 @@ export default function Quiz({ onComplete }: Props) {
                 exit={{ opacity: 0 }}
                 className="quiz-error"
               >
-                netnot, select the right answer!
+                nope, pick the right answer!
               </motion.p>
             )}
           </AnimatePresence>

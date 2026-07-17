@@ -5,7 +5,9 @@ import { useState } from "react";
 import WelcomeScreen from "./WelcomeScreen";
 import Boot from "./Boot";
 import Passcode from "./Passcode";
+import PreQuiz from "./PreQuiz";
 import Quiz from "./Quiz";
+import Congrats from "./Congrats";
 
 type Props = {
   onComplete: () => void;
@@ -15,7 +17,9 @@ type Step =
   | "welcome"
   | "boot"
   | "passcode"
-  | "quiz";
+  | "prequiz"
+  | "quiz"
+  | "congrats";
 
 export default function AccessScreen({
   onComplete,
@@ -40,14 +44,28 @@ export default function AccessScreen({
     case "passcode":
       return (
         <Passcode
-          onSuccess={() => setStep("quiz")}
+          onSuccess={() => setStep("prequiz")}
+        />
+      );
+
+    case "prequiz":
+      return (
+        <PreQuiz
+          onContinue={() => setStep("quiz")}
         />
       );
 
     case "quiz":
       return (
         <Quiz
-          onComplete={onComplete}
+          onComplete={() => setStep("congrats")}
+        />
+      );
+
+    case "congrats":
+      return (
+        <Congrats
+          onContinue={onComplete}
         />
       );
 

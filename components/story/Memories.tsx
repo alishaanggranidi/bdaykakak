@@ -85,7 +85,7 @@ export default function Memories({
       className="memories-scroller"
       style={{
         width: "100%",
-        background: "#08111F",
+        background: "#04182e",
       }}
     >
       <MemoryProgress

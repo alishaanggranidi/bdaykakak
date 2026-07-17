@@ -49,9 +49,9 @@ export default function ThreeGifts({
         </motion.h1>
 
         <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-white/70">
-          Aku menyiapkan tiga hadiah kecil.
-          Tidak besar,
-          tapi semuanya punya arti.
+          i prepared three little gifts.
+          nothing big,
+          but each one means something.
         </p>
 
         <div className="mt-20 grid gap-8 lg:grid-cols-3">

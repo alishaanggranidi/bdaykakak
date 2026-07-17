@@ -66,7 +66,7 @@ export default function Passcode({
         <p className="subtitle">
           hint:
           <br />
-          the day we officially 
+          the day we made it official
         </p>
 
         <div className={`passcode ${error ? "shake" : ""}`}>

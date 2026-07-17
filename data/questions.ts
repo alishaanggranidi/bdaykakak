@@ -8,8 +8,8 @@ export const questions = [
   },
   {
     question: "when was our first kiss?",
-    options: ["4 januari", "8 maret", "5 januari"],
-    answer: "5 januari",
+    options: ["4 january", "8 march", "5 january"],
+    answer: "5 january",
   },
   {
     question: "what do i usually call you?",

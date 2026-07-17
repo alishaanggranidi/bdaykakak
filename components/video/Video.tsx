@@ -23,11 +23,25 @@ export default function Video({
     video.play().catch(() => {});
   }, []);
 
-  function handleEnded() {
-    // Resume background music
+  function finish() {
+    // Resume background music, then move on to the ending.
     window.dispatchEvent(new Event("resume-music"));
 
     onComplete();
+  }
+
+  function handleEnded() {
+    finish();
+  }
+
+  function handleSkip() {
+    const video = videoRef.current;
+
+    if (video) {
+      video.pause();
+    }
+
+    finish();
   }
 
   return (
@@ -74,7 +88,6 @@ export default function Video({
               ref={videoRef}
               controls
               playsInline
-              poster="/video/poster.jpg"
               onEnded={handleEnded}
             >
               <source
@@ -84,6 +97,15 @@ export default function Video({
 
               your browser does not support this video
             </video>
+          </div>
+
+          <div className="video-actions">
+            <button
+              className="btn-secondary"
+              onClick={handleSkip}
+            >
+              skip to ending →
+            </button>
           </div>
         </motion.div>
       </div>
