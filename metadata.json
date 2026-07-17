@@ -1,0 +1,8 @@
+{
+  "name": "ACCESS_18",
+  "description": "An elegant, interactive birthday memories experience.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
