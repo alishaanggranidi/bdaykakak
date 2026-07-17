@@ -10,126 +10,126 @@ export const memories: Memory[] = [
     id: 1,
     title: "our first chat",
     caption:
-      "the moment everything started. a simple conversation that changed my life forever",
-    image: "/memories/01.jpg",
+      "the conversation that started everything between us",
+    image: "/memories/01.png",
   },
   {
     id: 2,
     title: "our first meet",
     caption:
-      "the first place where we finally met",
-    image: "/memories/02.jpg",
+      "after all the waiting, we finally met for the first time",
+    image: "/memories/02.png",
   },
   {
     id: 3,
     title: "our first kiss",
     caption:
-      "a place i'll never forget",
-    image: "/memories/03.jpg",
+      "one small moment, one memory i'll never forget",
+    image: "/memories/03.png",
   },
   {
     id: 4,
-    title: "our PDKT Text",
+    title: "our PDKT texts",
     caption:
-      "thousands of messages. none of them were ever boring",
-    image: "/memories/04.jpg",
+      "countless messages that made every day a little more exciting",
+    image: "/memories/04.png",
   },
   {
     id: 5,
-    title: "our first pap",
+    title: "your first pap",
     caption:
-      "the first photo you sent me. still one of my favorites",
-    image: "/memories/05.jpg",
+      "the first photo you sent me... and yes, i still have it",
+    image: "/memories/05.png",
   },
   {
     id: 6,
     title: "our first date",
     caption:
-      "the day i couldn't stop smiling",
-    image: "/memories/06.jpg",
+      "i was nervous, excited, and smiling the whole time",
+    image: "/memories/06.png",
   },
   {
     id: 7,
-    title: "our first date (the real one)",
-    caption:
-      "worth every second of waiting",
-    image: "/memories/07.jpg",
-  },
-  {
-    id: 8,
     title: "LDR",
     caption:
-      "distance wasn't easy. but somehow, you always felt close",
-    image: "/memories/08.jpg",
+      "distance wasn't easy, but somehow u never felt far away",
+    image: "/memories/07.png",
+  },  
+  {
+    id: 8,
+    title: "the first tulips",
+    caption:
+      "the flowers that became one of my favorite memories",
+    image: "/memories/08.png",
   },
   {
     id: 9,
-    title: "the first tulips",
+    title: "after LDR",
     caption:
-      "the flowers i'll never forget",
-    image: "/memories/09.jpg",
+      "finally seeing u again made all the waiting worth it",
+    image: "/memories/09.png",
   },
   {
     id: 10,
-    title: "after LDR",
+    title: "meeting my family",
     caption:
-      "finally, meet again after months of waiting",
-    image: "/memories/10.jpg",
+      "one step closer, n i'm glad they got to know u too",
+    image: "/memories/10.png",
   },
   {
     id: 11,
     title: "our naughty moment",
     caption:
-      "upsiee, i'll never forget this one",
-    image: "/memories/11.jpg",
+      "some memories are better left between us",
+    image: "/memories/11.png",
   },
   {
     id: 12,
     title: "my graduation",
     caption:
-      "thank you for being there on one of my proudest day",
-    image: "/memories/12.jpg",
+      "thank u for being there on one of the happiest days of my life",
+    image: "/memories/12.png",
   },
   {
     id: 13,
     title: "ferris wheel date",
     caption:
-      "the city looked beautiful, but you looked even better",
-    image: "/memories/13.jpg",
+      "the view was beautiful, but looking at you made it even better",
+    image: "/memories/13.png",
   },
   {
     id: 14,
     title: "blok M date",
     caption:
-      "an ordinary place, an unforgettable day.",
-    image: "/memories/14.jpg",
+      "nothing extraordinary, just another day i loved spending with yu",
+    image: "/memories/14.png",
   },
   {
     id: 15,
     title: "aquarium date",
     caption:
-      "watching the fish while secretly watching you",
-    image: "/memories/15.jpg",
+      "i spent more time looking at u than the fish",
+    image: "/memories/15.png",
   },
   {
     id: 16,
-    title: "our funny picture",
+    title: "virtual date",
     caption:
-      "still laughing every time i see this photo",
-    image: "/memories/16.jpg",
+      "different places, same smiles, same conversation",
+    image: "/memories/16.png",
   },
   {
     id: 17,
     title: "together again",
     caption:
-      "no more countdown, just us",
-    image: "/memories/17.jpg",
+      "no more countdowns, just us in the same place again",
+    image: "/memories/17.png",
   },
   {
     id: 18,
-    title: "you.",
+    title: "you",
     caption:
-      "special picture, special person. i love you so much",
-    image: "/memories/18.jpg",
+      "my favorite person, then, now, n always",
+    image: "/memories/18.png",
   },
 ];
