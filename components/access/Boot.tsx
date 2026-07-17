@@ -40,13 +40,13 @@ export default function Boot({
         </p>
 
         <h1 className="title">
-          Preparing
+          preparing
           <br />
-          Your Surprise
+          surprise
         </h1>
 
         <p className="subtitle">
-          Please wait a moment...
+          please wait a moment...
         </p>
 
         <div className="progress">

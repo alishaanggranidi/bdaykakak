@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 type Props = {
@@ -9,21 +9,32 @@ type Props = {
 
 const QUESTIONS = [
   {
-    question: "What's Caca's favorite flower?",
-    options: ["Rose", "Tulip", "Sunflower"],
-    answer: "Tulip",
+    question: "what's caca's favorite flower?",
+    options: ["rose", "tulip", "sunflower"],
+    answer: "tulip",
   },
   {
-    question: "When was our first kiss?",
-    options: ["4 Januari", "5 Januari", "8 Maret"],
-    answer: "5 Januari",
+    question: "when was our first kiss?",
+    options: ["4 januari", "5 januari", "8 maret"],
+    answer: "5 januari",
   },
   {
-    question: "What do I usually call you?",
-    options: ["Adek", "Kakak", "Sayang"],
-    answer: "Kakak",
+    question: "what do i usually call you?",
+    options: ["kakak", "sayang", "adek"],
+    answer: "adek",
   },
 ];
+
+function shuffle<T>(arr: T[]): T[] {
+  const copy = [...arr];
+
+  for (let i = copy.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [copy[i], copy[j]] = [copy[j], copy[i]];
+  }
+
+  return copy;
+}
 
 export default function Quiz({ onComplete }: Props) {
   const [current, setCurrent] = useState(0);
@@ -31,6 +42,13 @@ export default function Quiz({ onComplete }: Props) {
   const [shake, setShake] = useState(false);
 
   const question = QUESTIONS[current];
+
+  // Re-shuffled only when we move to a new question, so the
+  // correct answer isn't stuck in the same spot every time.
+  const options = useMemo(
+    () => shuffle(QUESTIONS[current].options),
+    [current]
+  );
 
   function handleAnswer(answer: string) {
     if (selected) return;
@@ -75,7 +93,7 @@ export default function Quiz({ onComplete }: Props) {
           </p>
 
           <h1 className="title">
-            Question {current + 1}
+            question {current + 1}
           </h1>
 
           <p className="subtitle">
@@ -83,7 +101,7 @@ export default function Quiz({ onComplete }: Props) {
           </p>
 
           <div className={`quiz-options ${shake ? "shake" : ""}`}>
-            {question.options.map((option) => {
+            {options.map((option) => {
               const isSelected = selected === option;
               const isCorrect = option === question.answer;
 
@@ -118,7 +136,7 @@ export default function Quiz({ onComplete }: Props) {
                 exit={{ opacity: 0 }}
                 className="quiz-error"
               >
-                That's not the answer.
+                netnot, select the right answer!
               </motion.p>
             )}
           </AnimatePresence>

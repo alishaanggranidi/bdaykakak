@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 
 type Props = {
@@ -15,10 +15,8 @@ export default function Passcode({
   const [code, setCode] = useState("");
   const [error, setError] = useState(false);
 
-  useEffect(() => {
-    if (code.length !== 4) return;
-
-    if (code === PASSWORD) {
+  function checkCode(value: string) {
+    if (value === PASSWORD) {
       setTimeout(() => {
         onSuccess();
       }, 500);
@@ -30,14 +28,21 @@ export default function Passcode({
         setError(false);
       }, 700);
     }
-  }, [code, onSuccess]);
+  }
 
   function press(value: string) {
-    if (code.length >= 4) return;
-    setCode((prev) => prev + value);
+    if (code.length >= 4 || error) return;
+
+    const next = code + value;
+    setCode(next);
+
+    if (next.length === 4) {
+      checkCode(next);
+    }
   }
 
   function remove() {
+    if (error) return;
     setCode((prev) => prev.slice(0, -1));
   }
 
@@ -53,15 +58,15 @@ export default function Passcode({
         </p>
 
         <h1 className="title">
-          Enter
+          enter
           <br />
-          Passcode
+          passcode
         </h1>
 
         <p className="subtitle">
-          Hint:
+          hint:
           <br />
-          The day we officially became us.
+          the day we officially 
         </p>
 
         <div className={`passcode ${error ? "shake" : ""}`}>

@@ -30,15 +30,15 @@ export default function WelcomeScreen({
         </p>
 
         <h1 className="title">
-          Happy Birthday,
+          happy birthday,
           <br />
-          Kak Atha.
+          kakak
         </h1>
 
         <p className="subtitle">
-          I made something special just for you.
+          something special just for you
           <br />
-          I hope you'll enjoy every little part of it.
+          hope you&apos;ll like every little part of it
         </p>
 
         <button

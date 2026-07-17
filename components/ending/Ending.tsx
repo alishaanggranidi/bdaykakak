@@ -37,9 +37,9 @@ export default function Ending({
             duration: 0.8,
           }}
         >
-          Happy Birthday,
+          happy birthday,
           <br />
-          Kakak.
+          sayangku
         </motion.h1>
 
         <motion.p
@@ -55,11 +55,11 @@ export default function Ending({
             marginTop: 40,
           }}
         >
-          Thank you for every laugh,
+          thank you for every laugh,
           every adventure,
           every memory,
           and every little moment
-          we've shared together.
+          we&apos;ve shared together
         </motion.p>
 
         <motion.p
@@ -75,8 +75,8 @@ export default function Ending({
             marginTop: 30,
           }}
         >
-          I hope this won't be
-          our last chapter.
+          i hope this won&apos;t be
+          our last chapter
         </motion.p>
 
         <motion.p
@@ -93,13 +93,13 @@ export default function Ending({
             lineHeight: 1.8,
           }}
         >
-          With all my love,
+          with all my love,
           <br />
-          Caca ❤️
+          ur caca 
         </motion.p>
 
         <motion.button
-          className="primary-button"
+          className="btn-primary"
           initial={{
             opacity: 0,
             y: 20,
@@ -117,7 +117,7 @@ export default function Ending({
             marginTop: 70,
           }}
         >
-          Experience It Again
+          experience it again
         </motion.button>
 
       </div>

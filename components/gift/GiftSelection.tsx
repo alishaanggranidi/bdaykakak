@@ -32,12 +32,11 @@ export default function GiftSelection({
           </p>
 
           <h1 className="title">
-            Choose One.
+            only for you, kakak
           </h1>
 
           <p className="subtitle">
-            Only one gift
-            has been prepared for you.
+            two gifts are waiting for you, but only one can be opened now
           </p>
 
         </motion.div>
@@ -60,71 +59,53 @@ export default function GiftSelection({
                 marginBottom: 16,
               }}
             >
-              Something
+              something
               <br />
-              You Love
+              you love
             </h2>
 
             <p
               className="small"
             >
-              Open
+              open
             </p>
           </motion.div>
 
-          <motion.div
-            whileHover={{
-              y: -8,
-            }}
-            className="gift-card"
-            style={{
-              opacity: .55,
-              cursor: "not-allowed",
-            }}
-          >
+          <div className="gift-card locked">
             <h2
               style={{
                 fontSize: "1.6rem",
                 marginBottom: 16,
               }}
             >
-              Something
+              something
               <br />
-              You Need
+              you need
             </h2>
 
             <p className="small">
-              Locked
+              sorry, locked
             </p>
 
-          </motion.div>
+          </div>
 
-          <motion.div
-            whileHover={{
-              y: -8,
-            }}
-            className="gift-card"
-            style={{
-              opacity: .55,
-              cursor: "not-allowed",
-            }}
-          >
+          <div className="gift-card locked">
             <h2
               style={{
                 fontSize: "1.6rem",
                 marginBottom: 16,
               }}
             >
-              Something
+              something
               <br />
-              You Deserve
+              you deserve
             </h2>
 
             <p className="small">
-              Locked
+              sorry, locked
             </p>
 
-          </motion.div>
+          </div>
 
         </div>
 

@@ -46,7 +46,7 @@ export default function Love({
             duration: .8,
           }}
         >
-          Before we continue...
+          before we continue...
         </motion.h1>
 
         <motion.p
@@ -65,7 +65,7 @@ export default function Love({
             marginTop: 30,
           }}
         >
-          I have something to tell you.
+          i have something to tell you.....
         </motion.p>
 
         <motion.h2
@@ -89,11 +89,11 @@ export default function Love({
             color: "#FFFFFF",
           }}
         >
-          This website
+          this 
           <br />
           has never been
           <br />
-          about your birthday.
+          about ur birthday
         </motion.h2>
 
         <motion.h2
@@ -117,7 +117,7 @@ export default function Love({
             letterSpacing: "-0.03em",
           }}
         >
-          It's about you.
+          it&apos;s about u
         </motion.h2>
 
       </div>

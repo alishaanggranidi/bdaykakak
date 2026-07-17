@@ -37,11 +37,11 @@ export default function VideoIntro({
             duration: 0.8,
           }}
         >
-          This one
+          this one
           <br />
-          isn't only
+          isn&apos;t only
           <br />
-          from me.
+          from me
         </motion.h1>
 
         <motion.p
@@ -61,12 +61,12 @@ export default function VideoIntro({
             marginTop: 48,
           }}
         >
-          There are some people who also
-          want to celebrate your birthday.
+          there are some people who also
+          want to celebrate your birthday
         </motion.p>
 
         <motion.button
-          className="primary-button"
+          className="btn-primary"
           initial={{
             opacity: 0,
             y: 20,
@@ -84,7 +84,7 @@ export default function VideoIntro({
             marginTop: 70,
           }}
         >
-          Play Video
+          play video
         </motion.button>
 
       </div>

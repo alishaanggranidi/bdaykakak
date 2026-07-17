@@ -46,7 +46,7 @@ export default function Intro({
             duration: .8,
           }}
         >
-          18 memories.
+          18 memories
         </motion.h1>
 
         <motion.h2
@@ -67,7 +67,7 @@ export default function Intro({
             fontWeight: 500,
           }}
         >
-          One amazing person.
+          one amazing person
         </motion.h2>
 
         <motion.p
@@ -87,8 +87,8 @@ export default function Intro({
             marginTop: 70,
           }}
         >
-          Thank you for creating
-          every memory with me.
+          thank you for creating
+          every memory with me
         </motion.p>
 
       </div>

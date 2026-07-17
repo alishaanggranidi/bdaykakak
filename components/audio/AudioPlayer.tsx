@@ -24,14 +24,16 @@ export default function AudioPlayer() {
       audio.play().catch(() => {});
 
       setStarted(true);
-
-      window.removeEventListener("click", start);
     };
 
     window.addEventListener("click", start);
+    window.addEventListener("touchstart", start);
+    window.addEventListener("keydown", start);
 
     return () => {
       window.removeEventListener("click", start);
+      window.removeEventListener("touchstart", start);
+      window.removeEventListener("keydown", start);
     };
   }, [started]);
 
@@ -108,6 +110,7 @@ export default function AudioPlayer() {
       <button
         onClick={toggleMute}
         className="music-button"
+        aria-label={muted ? "Unmute music" : "Mute music"}
       >
         {muted ? "🔇" : "🔊"}
       </button>
@@ -138,16 +141,16 @@ export default function AudioPlayer() {
           <p className="music-title">
 
             {videoMode
-              ? "Video audio playing"
-              : "Blue • Yung Kai"}
+              ? "video audio playing"
+              : "18 • one direction"}
 
           </p>
 
           <p className="music-subtitle">
 
             {videoMode
-              ? "Birthday Wishes"
-              : "Background Music"}
+              ? "video audio playing"
+              : "background music"}
 
           </p>
 

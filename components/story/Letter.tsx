@@ -42,9 +42,9 @@ export default function Letter({
               duration: 0.8,
             }}
           >
-            Happy Birthday,
+            happy birthday,
             <br />
-            Kakak.
+            sayangku
           </motion.h1>
 
           <motion.div
@@ -57,47 +57,47 @@ export default function Letter({
             }}
           >
             <p>
-              Thank you for becoming someone who makes
-              ordinary days feel special.
+              thank you for becoming someone who makes
+              ordinary days feel special
             </p>
 
             <p>
-              Thank you for every laugh, every story,
+              thank you for every laugh, every story,
               every late-night conversation, every hug,
-              and every little moment we've shared.
+              and every little moment we&apos;ve shared together
             </p>
 
             <p>
-              This website is only a small gift,
+              this is only a small gift,
               but every page inside it was made
-              with love.
+              with love
             </p>
 
             <p>
-              I hope this new chapter brings you
+              i hope this new chapter brings you
               happiness, good health, success,
-              and many beautiful memories.
+              and many beautiful memories
             </p>
 
             <p>
-              Whatever happens,
+              whatever happens,
               wherever life takes us,
-              I hope we will always
-              find our way back to each other.
+              i hope we will always
+              find our way back to each other
             </p>
 
             <p>
-              Happy Birthday once again.
+              happy birthday once again
             </p>
 
             <p>
-              I love you,
-              always.
+              i love you,
+              always
             </p>
           </motion.div>
 
           <motion.button
-            className="primary-button"
+            className="btn-primary"
             initial={{
               opacity: 0,
             }}
@@ -110,7 +110,7 @@ export default function Letter({
             }}
             onClick={onComplete}
           >
-            Continue
+            continue
           </motion.button>
 
         </motion.div>

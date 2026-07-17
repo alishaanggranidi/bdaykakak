@@ -2,18 +2,18 @@
 
 export const questions = [
   {
-    question: "What's Caca's favorite flower?",
-    options: ["Rose", "Tulip", "Sunflower"],
-    answer: "Tulip",
+    question: "what's caca's favorite flower?",
+    options: ["rose", "tulip", "sunflower"],
+    answer: "tulip",
   },
   {
-    question: "When was our first kiss?",
-    options: ["4 Januari", "5 Januari", "8 Maret"],
-    answer: "5 Januari",
+    question: "when was our first kiss?",
+    options: ["4 januari", "8 maret", "5 januari"],
+    answer: "5 januari",
   },
   {
-    question: "What do I usually call you?",
-    options: ["Adek", "Kakak", "Sayang"],
-    answer: "Kakak",
+    question: "what do i usually call you?",
+    options: ["kakak", "sayang", "adek"],
+    answer: "adek",
   },
 ];

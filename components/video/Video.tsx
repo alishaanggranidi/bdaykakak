@@ -64,25 +64,27 @@ export default function Video({
               marginBottom: 48,
             }}
           >
-            From the people
+            from the people
             <br />
-            who love you.
+            who love you
           </h1>
 
-          <video
-            ref={videoRef}
-            className="birthday-video"
-            controls
-            playsInline
-            onEnded={handleEnded}
-          >
-            <source
-              src="/video/birthday.mp4"
-              type="video/mp4"
-            />
+          <div className="video-wrapper">
+            <video
+              ref={videoRef}
+              controls
+              playsInline
+              poster="/video/poster.jpg"
+              onEnded={handleEnded}
+            >
+              <source
+                src="/video/birthday.mp4"
+                type="video/mp4"
+              />
 
-            Your browser does not support this video.
-          </video>
+              your browser does not support this video
+            </video>
+          </div>
         </motion.div>
       </div>
     </div>
